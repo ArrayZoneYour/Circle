@@ -1,37 +1,29 @@
 import {Link, Route, Switch} from "react-router-dom";
 import App from "../App";
 import * as React from "react";
-import {Layout, Breadcrumb, Menu} from "antd";
-const { Header, Content, Footer, Sider } = Layout;
+import {Layout, Breadcrumb, Icon} from "antd";
 import * as styles from "./MainLayout.less";
 
+import Menu from '../utils/view/Menu';
+
+const { Header, Content, Footer, Sider } = Layout;
 const Home = () => <div>Home</div>;
 
 console.log(styles, App);
 
 const MainLayout = () => {
     return (
-        <Layout style={{ height: '800px'}}>
+        <Layout>
             <Sider>
                 <div className={styles.logo} style={{ textAlign: 'center', textDecoration: 'none' }}>
                     <Link to="/">
                         <h1>✈️</h1>
                     </Link>
                 </div>
-                <Menu>
-
-                </Menu>
+                <Menu mode='inline' theme='dark' />
             </Sider>
             {/*<Link to='/about'>About</Link>*/}
             {/*<Link to='/'>Home</Link>*/}
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route
-                path='/about'
-                render={(props) => <App {...props} />}
-                />
-                <Route render={() => (<div>404</div>)} />
-            </Switch>
             <Layout>
                 <Header style={{ background: '#fff', padding: 0 }} />
                 <Content style={{ margin: '0 16px', height: '100%'}}>
@@ -40,7 +32,14 @@ const MainLayout = () => {
                         <Breadcrumb.Item>Bill</Breadcrumb.Item>
                     </Breadcrumb>
                     <div style={{ padding: 24, background: '#fff' }}>
-                        Bill is a cat.
+                        <Switch>
+                            <Route exact path='/' component={Home} />
+                            <Route
+                                path='/about'
+                                render={(props) => <App {...props} />}
+                            />
+                            <Route render={() => (<div>404</div>)} />
+                        </Switch>
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>

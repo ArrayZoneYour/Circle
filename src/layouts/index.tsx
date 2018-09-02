@@ -8,7 +8,7 @@ const client = new ApolloClient({
     uri: "http://localhost:4000"
 });
 
-const Layout = () => (
+const GlobalLayout = () => (
     <Router>
         <ApolloProvider client={client}>
             <MainLayout />
@@ -16,4 +16,4 @@ const Layout = () => (
     </Router>
 );
 
-export default Layout;
+export default GlobalLayout;
