@@ -4,9 +4,9 @@ import * as ReactDOM from "react-dom";
 // Import the global css from here (especially antd, because it doesn't support css module!!!)
 import "./App.less";
 
-import Layout from './layouts';
+import GlobalLayout from './layouts';
 
 ReactDOM.render(
-    <Layout />,
+    <GlobalLayout />,
     document.getElementById("root")
 );
