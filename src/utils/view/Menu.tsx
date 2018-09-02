@@ -26,8 +26,7 @@ const _SubMenuItem = (props: MenuItemType) => (
 );
 
 const _IMenu = (props: MenuItemListType) => {
-    const l = props.map(prop => propsPropagate(prop));
-    return l.map(_MenuItem)
+    return props.map(prop => propsPropagate(prop)).map(_MenuItem)
 };
 
 export default (props: {mode: MenuMode, theme: MenuTheme}) => {
