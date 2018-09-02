@@ -1,0 +1,47 @@
+{
+  "name": "circle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.tsx",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --port=8888"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ArrayZoneYour/circle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "@types/react": "^16.4.13",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-router-dom": "^4.3.0",
+    "babel-loader": "^8.0.0",
+    "css-loader": "^1.0.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.0",
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.0.3",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7"
+  },
+  "dependencies": {
+    "@types/react-router": "^4.0.30",
+    "antd": "^3.8.4",
+    "apollo-boost": "^0.1.15",
+    "classnames": "^2.2.6",
+    "graphql": "^14.0.0",
+    "react": "^16.4.2",
+    "react-apollo": "^2.1.11",
+    "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1"
+  }
+}
