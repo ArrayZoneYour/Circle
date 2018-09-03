@@ -5,7 +5,7 @@ import * as React from "react";
 import MainLayout from './MainLayout';
 
 const client = new ApolloClient({
-    uri: "http://localhost:4000"
+    uri: "http://localhost:9999"
 });
 
 const GlobalLayout = () => (
