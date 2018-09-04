@@ -1,10 +1,11 @@
 {
   "name": "circle",
-  "version": "1.0.0",
+  "version": "0.0.1-dev",
   "description": "",
   "main": "index.tsx",
   "scripts": {
-    "client": "webpack-dev-server --mode development --port=8888",
+    "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --hot --port=8888 --mode development --output-public-path=/dist/\"",
+    "build": "webpack-dev-server --mode production --port=7777",
     "server": "nodemon ./server/index.js --exec babel-node"
   },
   "repository": {
@@ -23,13 +24,16 @@
     "@babel/preset-typescript": "^7.0.0",
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
+    "@types/react-router": "^4.0.30",
     "@types/react-router-dom": "^4.3.0",
+    "@types/webpack": "^4.4.11",
     "@types/webpack-env": "^1.13.6",
     "babel-loader": "^8.0.0",
     "css-loader": "^1.0.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "nodemon": "^1.18.4",
+    "react-hot-loader": "^4.3.6",
     "style-loader": "^0.23.0",
     "ts-loader": "^4.5.0",
     "typescript": "^3.0.3",
@@ -38,13 +42,10 @@
     "webpack-dev-server": "^3.1.7"
   },
   "dependencies": {
-    "@types/react-router": "^4.0.30",
     "antd": "^3.9.1",
     "apollo-boost": "^0.1.15",
-    "apollo-server": "^2.0.5",
     "classnames": "^2.2.6",
     "graphql": "^14.0.0",
-    "lodash.merge": "^4.6.1",
     "react": "^16.4.2",
     "react-apollo": "^2.1.11",
     "react-dom": "^16.4.2",

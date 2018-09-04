@@ -1,8 +1,8 @@
 import {Link, Route, Switch} from "react-router-dom";
-import App from "../App";
 import * as React from "react";
 import {Layout, Breadcrumb} from "antd";
 import * as styles from "./MainLayout.less";
+import { hot } from 'react-hot-loader';
 
 import Menu from '../utils/view/Menu';
 import {context, modules} from "../registry";
@@ -35,8 +35,7 @@ const MainLayout = () => {
                     </Breadcrumb>
                     <div style={{ padding: 24, background: '#fff' }}>
                         <Switch>
-                            {/*<Route exact path='/' component={Home} />*/}
-                            {Object.keys(modules).map((path) => <Route key={path} exact path={path} component={modules[path]} />)}
+                            {Object.keys(modules).map((path) => <Route key={path} exact path={path ? path : '/'} component={modules[path]} />)}
                             <Route component={modules.hasOwnProperty('/404') ? modules['/404'] : () => (<div>404</div>)} />
                         </Switch>
                     </div>
@@ -49,4 +48,4 @@ const MainLayout = () => {
     );
 };
 
-export default MainLayout;
+export default hot(module)(MainLayout);
