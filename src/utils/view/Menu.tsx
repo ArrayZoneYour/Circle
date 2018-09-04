@@ -13,6 +13,7 @@ const _MenuItem = (props: MenuItemType) => {
     return props.hasOwnProperty('children') ? _SubMenuItem(props) :
         <MenuItem key={props.path + props.name}>
             <Link to={props.path}>
+                {/*TODO: crash when props.icon doesn't exist*/}
                 <Icon type={props.icon}/>
                 <span>{props.name}</span>
             </Link>

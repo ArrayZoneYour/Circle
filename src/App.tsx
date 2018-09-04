@@ -10,7 +10,9 @@ class App extends Component<RouteComponentProps<any>>{
     render(){
         return (
                 <Query query={gql`{
-                    collections
+                    guys {
+                        name
+                    }
                 }`}>
                     {({loading, error, data}) => {
                         if (loading) return <p>Loading...</p>;
