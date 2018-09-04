@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@types/react-router": "^4.0.30",
-    "antd": "^3.8.4",
+    "antd": "^3.9.1",
     "apollo-boost": "^0.1.15",
     "apollo-server": "^2.0.5",
     "classnames": "^2.2.6",

@@ -11,16 +11,16 @@ const MenuItem = Menu.Item;
 
 const _MenuItem = (props: MenuItemType) => {
     return props.hasOwnProperty('children') ? _SubMenuItem(props) :
-        <MenuItem>
+        <MenuItem key={props.path + props.name}>
             <Link to={props.path}>
                 <Icon type={props.icon}/>
-                {props.name}
+                <span>{props.name}</span>
             </Link>
         </MenuItem>;
 };
 
 const _SubMenuItem = (props: MenuItemType) => (
-    <SubMenu title={<span><Icon type={props.icon} /><span>{props.name}</span></span>}>
+    <SubMenu key={props.path + props.name} title={<span><Icon type={props.icon} /><span>{props.name}</span></span>}>
         { props.children.map(_MenuItem) }
     </SubMenu>
 );
