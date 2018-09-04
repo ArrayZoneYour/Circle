@@ -5,13 +5,13 @@ import {Layout, Breadcrumb} from "antd";
 import * as styles from "./MainLayout.less";
 
 import Menu from '../utils/view/Menu';
+import {context, modules} from "../registry";
 
 const { Header, Content, Footer, Sider } = Layout;
-const Home = () => <div>Home</div>;
-
-console.log(styles, App);
 
 const MainLayout = () => {
+    console.log(context);
+    console.log(modules);
     return (
         <Layout>
             <Sider
@@ -35,12 +35,9 @@ const MainLayout = () => {
                     </Breadcrumb>
                     <div style={{ padding: 24, background: '#fff' }}>
                         <Switch>
-                            <Route exact path='/' component={Home} />
-                            <Route
-                                path='/about'
-                                render={(props) => <App {...props} />}
-                            />
-                            <Route render={() => (<div>404</div>)} />
+                            {/*<Route exact path='/' component={Home} />*/}
+                            {Object.keys(modules).map((path) => <Route key={path} exact path={path} component={modules[path]} />)}
+                            <Route component={modules.hasOwnProperty('/404') ? modules['/404'] : () => (<div>404</div>)} />
                         </Switch>
                     </div>
                 </Content>
