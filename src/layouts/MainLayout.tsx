@@ -1,7 +1,7 @@
 import {Link, Route, Switch} from "react-router-dom";
 import App from "../App";
 import * as React from "react";
-import {Layout, Breadcrumb, Icon} from "antd";
+import {Layout, Breadcrumb} from "antd";
 import * as styles from "./MainLayout.less";
 
 import Menu from '../utils/view/Menu';
@@ -14,19 +14,21 @@ console.log(styles, App);
 const MainLayout = () => {
     return (
         <Layout>
-            <Sider>
-                <div className={styles.logo} style={{ textAlign: 'center', textDecoration: 'none' }}>
+            <Sider
+                collapsible
+            >
+                <div className={styles.logo} style={{ textAlign: 'center' }}>
                     <Link to="/">
                         <h1>✈️</h1>
                     </Link>
                 </div>
                 <Menu mode='inline' theme='dark' />
             </Sider>
-            {/*<Link to='/about'>About</Link>*/}
-            {/*<Link to='/'>Home</Link>*/}
             <Layout>
-                <Header style={{ background: '#fff', padding: 0 }} />
-                <Content style={{ margin: '0 16px', height: '100%'}}>
+                <Header style={{ background: '#fff', padding: '0 2rem', textAlign: 'right' }}>
+                    <span>Under Development</span>
+                </Header>
+                <Content style={{ margin: '0 16px' }}>
                     <Breadcrumb style={{ margin: '16px 0' }}>
                         <Breadcrumb.Item>User</Breadcrumb.Item>
                         <Breadcrumb.Item>Bill</Breadcrumb.Item>
