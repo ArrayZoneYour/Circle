@@ -16,4 +16,4 @@ const GlobalLayout = () => (
     </Router>
 );
 
-export default GlobalLayout;
+export default (GlobalLayout);

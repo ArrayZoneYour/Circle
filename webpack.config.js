@@ -53,9 +53,15 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         contentBase: path.join(__dirname, "public/"),
-        port: 3000,
+        port: 8888,
         publicPath: "http://localhost:8888/dist/",
-        hotOnly: true
+        hotOnly: true,
+        overlay: true
     },
-    plugins: [ new webpack.HotModuleReplacementPlugin() ]
+    plugins: [
+        // new webpack.HotModuleReplacementPlugin(),
+        new webpack.WatchIgnorePlugin([
+            path.join(__dirname, "node_modules")
+        ]),
+    ]
 };
