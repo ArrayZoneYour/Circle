@@ -1,4 +1,4 @@
-export const context = require.context("./pages", true,  /\.tsx$/);
+const context = require.context("./pages", true,  /\.tsx$/);
 export const modules =
     Object.assign({},
         ...context.keys()

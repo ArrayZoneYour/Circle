@@ -1,6 +1,6 @@
 {
   "name": "circle",
-  "version": "0.0.1-dev",
+  "version": "v0.0.1",
   "description": "",
   "main": "index.tsx",
   "scripts": {
@@ -13,7 +13,7 @@
     "url": "git@github.com:ArrayZoneYour/circle.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "ArrayZoneYour",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.0.0",
