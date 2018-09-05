@@ -1,46 +1,36 @@
-import {Link, Route, Switch} from "react-router-dom";
-import App from "../App";
 import * as React from "react";
-import {Layout, Breadcrumb, Menu} from "antd";
-const { Header, Content, Footer, Sider } = Layout;
+import {Link, RouteComponentProps, Switch, withRouter} from "react-router-dom";
+import { hot } from 'react-hot-loader';
+import {Layout} from "antd";
 import * as styles from "./MainLayout.less";
 
-const Home = () => <div>Home</div>;
+import Menu from '../utils/view/Menu';
+import {RouterOutlet} from "../core/Route";
+import { Navigator } from './NavigateBreadcrumb';
 
-console.log(styles, App);
+const { Header, Content, Footer, Sider } = Layout;
 
-const MainLayout = () => {
+const MainLayout = (props: RouteComponentProps<{}>) => {
     return (
-        <Layout style={{ height: '800px'}}>
-            <Sider>
-                <div className={styles.logo} style={{ textAlign: 'center', textDecoration: 'none' }}>
+        <Layout>
+            <Sider
+                collapsible
+            >
+                <div className={styles.logo} style={{ textAlign: 'center' }}>
                     <Link to="/">
                         <h1>✈️</h1>
                     </Link>
                 </div>
-                <Menu>
-
-                </Menu>
+                <Menu mode='inline' theme='dark' />
             </Sider>
-            {/*<Link to='/about'>About</Link>*/}
-            {/*<Link to='/'>Home</Link>*/}
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route
-                path='/about'
-                render={(props) => <App {...props} />}
-                />
-                <Route render={() => (<div>404</div>)} />
-            </Switch>
             <Layout>
-                <Header style={{ background: '#fff', padding: 0 }} />
-                <Content style={{ margin: '0 16px', height: '100%'}}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                        <Breadcrumb.Item>User</Breadcrumb.Item>
-                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
+                <Header style={{ background: '#fff', padding: '0 2rem', textAlign: 'right' }}>
+                    <span>Under Development</span>
+                </Header>
+                <Content style={{ margin: '0 16px' }}>
+                    <Navigator {...props} />
                     <div style={{ padding: 24, background: '#fff' }}>
-                        Bill is a cat.
+                        <RouterOutlet />
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
@@ -51,4 +41,4 @@ const MainLayout = () => {
     );
 };
 
-export default MainLayout;
+export default hot(module)(withRouter(MainLayout));

@@ -1,0 +1,26 @@
+{
+  "name": "circle-server",
+  "version": "v0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ArrayZoneYour/circle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "apollo-server": "^2.0.5",
+    "lodash.merge": "^4.6.1"
+  }
+}

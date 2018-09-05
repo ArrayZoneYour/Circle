@@ -2,7 +2,7 @@ export interface MenuItemType {
     readonly icon?:string;
     readonly name:string;
     readonly path:string;
-    readonly children?: MenuData;
+    readonly children?: MenuItemListType;
 }
 
-export type MenuData = Array<MenuItemType>;
+export type MenuItemListType = Array<MenuItemType>;
