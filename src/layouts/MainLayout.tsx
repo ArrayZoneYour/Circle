@@ -1,17 +1,16 @@
-import {Link, Route, Switch} from "react-router-dom";
 import * as React from "react";
-import {Layout, Breadcrumb} from "antd";
-import * as styles from "./MainLayout.less";
+import {Link, RouteComponentProps, Switch, withRouter} from "react-router-dom";
 import { hot } from 'react-hot-loader';
+import {Layout} from "antd";
+import * as styles from "./MainLayout.less";
 
 import Menu from '../utils/view/Menu';
-import {context, modules} from "../registry";
+import {RouterOutlet} from "../core/Route";
+import { Navigator } from './NavigateBreadcrumb';
 
 const { Header, Content, Footer, Sider } = Layout;
 
-const MainLayout = () => {
-    console.log(context);
-    console.log(modules);
+const MainLayout = (props: RouteComponentProps<{}>) => {
     return (
         <Layout>
             <Sider
@@ -29,15 +28,9 @@ const MainLayout = () => {
                     <span>Under Development</span>
                 </Header>
                 <Content style={{ margin: '0 16px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                        <Breadcrumb.Item>User</Breadcrumb.Item>
-                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
+                    <Navigator {...props} />
                     <div style={{ padding: 24, background: '#fff' }}>
-                        <Switch>
-                            {Object.keys(modules).map((path) => <Route key={path} exact path={path ? path : '/'} component={modules[path]} />)}
-                            <Route component={modules.hasOwnProperty('/404') ? modules['/404'] : () => (<div>404</div>)} />
-                        </Switch>
+                        <RouterOutlet />
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
@@ -48,4 +41,4 @@ const MainLayout = () => {
     );
 };
 
-export default hot(module)(MainLayout);
+export default hot(module)(withRouter(MainLayout));
