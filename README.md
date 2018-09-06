@@ -14,6 +14,19 @@ npm install
 npm run start
 ```
 
+### Feature Map
+
+- [ ] Visualize the folder structure and code lines
+- [ ] Visualize the npm dependencies
+
+### Feature Map v0.0.2
+
+- [ ] TreeShaking npm packages
+- [x] Separate the css and js when webpack build
+- [ ] Debug mode (Show the build time ... info on the right-bottom corner)
+- [ ] Todo List Level Demo
+    - [ ] SubTask
+
 ### Feature Map v0.0.1
 
 - [x] Webpack Naive Pipeline
@@ -27,19 +40,6 @@ npm run start
 - [x] Route automatically by the construction under `src/pages`
 - [x] Refresh the browser when code change
 - [x] Code Review and Release v0.0.1
-
-### Feature Map v0.0.2
-
-- [ ] TreeShaking npm packages
-- [x] Separate the css and js when webpack build
-- [ ] Debug mode (Show the build time ... info on the right-bottom corner)
-- [ ] Todo List Level Demo
-    - [ ] SubTask
-
-### Feature Map
-
-- [ ] Visualize the folder structure and code lines
-- [ ] Visualize the npm dependencies
 
 ## License
 
