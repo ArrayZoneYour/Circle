@@ -1,6 +1,6 @@
 {
   "name": "circle",
-  "version": "v0.0.1",
+  "version": "v0.0.2-dev",
   "description": "",
   "main": "index.tsx",
   "scripts": {
@@ -30,9 +30,11 @@
     "@types/webpack-env": "^1.13.6",
     "babel-loader": "^8.0.0",
     "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "nodemon": "^1.18.4",
+    "postcss-loader": "^3.0.0",
     "react-hot-loader": "^4.3.6",
     "style-loader": "^0.23.0",
     "ts-loader": "^4.5.0",

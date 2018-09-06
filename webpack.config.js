@@ -1,5 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const extractCSS = new ExtractTextPlugin('circle.min.css');
 
 module.exports = {
     entry: "./src/index.tsx",
@@ -20,27 +22,25 @@ module.exports = {
             {
                 test: /.less$/,
                 include: /App\.less/,
-                use: [
-                    { loader: 'style-loader' },
+                use: extractCSS.extract([
                     { loader: 'css-loader' , options: { localIdentName: "[local]___[hash:base64:5]", importLoaders: 1 }},
                     { loader: 'less-loader', options: { javascriptEnabled: true }}
-                ]
+                ])
             },
             {
                 test: /\.less$/,
                 exclude: /App\.less/,
-                use: [
-                    { loader: 'style-loader' },
+                use: extractCSS.extract([
                     { loader: 'css-loader' , options: { modules: true, localIdentName: "[local]___[hash:base64:5]", importLoaders: 1 }},
                     { loader: 'less-loader', options: { javascriptEnabled: true }}
-                ]
+                ])
             },
             {
                 test: /\.css$/,
-                use: [
-                    { loader: 'style-loader' },
-                    { loader: 'css-loader' }
-                ]
+                use: extractCSS.extract([
+                    { loader: 'css-loader' },
+                    { loader: 'postcss-loader' }
+                ])
             },
         ]
     },
@@ -48,7 +48,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "/dist/",
-        filename: "bundle.js"
+        filename: "circle.js"
     },
     devServer: {
         historyApiFallback: true,
@@ -59,7 +59,7 @@ module.exports = {
         overlay: true
     },
     plugins: [
-        // new webpack.HotModuleReplacementPlugin(),
+        extractCSS,
         new webpack.WatchIgnorePlugin([
             path.join(__dirname, "node_modules")
         ]),

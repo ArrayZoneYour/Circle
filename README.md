@@ -31,8 +31,10 @@ npm run start
 ### Feature Map v0.0.2
 
 - [ ] TreeShaking npm packages
-- [ ] Separate the css and js when webpack build
+- [x] Separate the css and js when webpack build
 - [ ] Debug mode (Show the build time ... info on the right-bottom corner)
+- [ ] Todo List Level Demo
+    - [ ] SubTask
 
 ### Feature Map
 
