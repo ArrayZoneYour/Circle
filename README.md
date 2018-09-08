@@ -1,6 +1,8 @@
 ## Circle
 
-🚀 **Release the power of Font-end**
+🚀 Release the power of Font-end
+
+💪 Finding the best practice
 
 ### Quick Start
 
@@ -16,15 +18,20 @@ npm install
 npm run start
 ```
 
+### Analyse you code in production
+```bash
+npm run analyse
+```
+
 ### Feature Map
 
 - [ ] Visualize the folder structure and code lines
-- [ ] Visualize the npm dependencies
 
 ### Feature Map v0.0.2
 
-- [ ] TreeShaking npm packages
+- [x] TreeShaking npm packages
 - [x] Separate the css and js when webpack build
+- [x] Visualize the npm dependencies
 - [ ] Debug mode (Show the build time ... info on the right-bottom corner)
 - [ ] Todo List Level Demo
     - [ ] SubTask

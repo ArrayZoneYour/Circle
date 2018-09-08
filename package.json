@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.tsx",
   "scripts": {
-    "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --hot --port=8888 --mode development --output-public-path=/dist/\"",
-    "build": "webpack-dev-server --mode production --port=7777",
+    "start": "nodemon --exec \"webpack-dev-server --config webpack.dev.js --hot --port=8887 --mode development --output-public-path=/dist/\"",
+    "build": "webpack --config webpack.prod.js --mode production --port=7777",
+    "analyse": "nodemon --watch webpack.analyse.js --exec \"npx webpack --config webpack.analyse.js\"",
     "server": "nodemon ./server/index.js --exec babel-node"
   },
   "repository": {
@@ -29,6 +30,7 @@
     "@types/webpack": "^4.4.11",
     "@types/webpack-env": "^1.13.6",
     "babel-loader": "^8.0.0",
+    "babel-plugin-import": "^1.8.0",
     "css-loader": "^1.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "less": "^3.8.1",
@@ -40,8 +42,10 @@
     "ts-loader": "^4.5.0",
     "typescript": "^3.0.3",
     "webpack": "^4.17.1",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.7"
+    "webpack-dev-server": "^3.1.7",
+    "webpack-merge": "^4.1.4"
   },
   "dependencies": {
     "antd": "^3.9.1",

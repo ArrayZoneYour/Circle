@@ -1,7 +1,10 @@
 {
+  "plugins": [
+    ["import", { "libraryName": "antd", "style": true, "libraryDirectory": "es" }]
+  ],
   "presets": [
     "react-hot-loader/babel",
-    "@babel/env",
+    ["@babel/env", { "modules": false }],
     "@babel/react",
     "@babel/preset-typescript"
   ]
