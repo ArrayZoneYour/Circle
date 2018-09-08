@@ -21,7 +21,7 @@ export const menuData: MenuItemListType = [
         ]
     },
     {
-        icon: 'ordered-list',
+        icon: 'orderedlist',
         name: 'SubMenu',
         path: 'sub',
         children: [

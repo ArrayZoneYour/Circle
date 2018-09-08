@@ -5,7 +5,6 @@ const extractCSS = new ExtractTextPlugin('circle.min.css');
 
 module.exports = {
     entry: "./src/index.tsx",
-    mode: "development",
     module: {
         rules: [
             {
@@ -44,19 +43,11 @@ module.exports = {
             },
         ]
     },
-    resolve: { extensions: ['*', '.ts', '.tsx', '.js', '.jsx'] },
+    resolve: { extensions: ['*', '.ts', '.tsx', '.mjs', '.js', '.jsx'] },
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "/dist/",
         filename: "circle.js"
-    },
-    devServer: {
-        historyApiFallback: true,
-        contentBase: path.join(__dirname, "public/"),
-        port: 8888,
-        publicPath: "http://localhost:8888/dist/",
-        hotOnly: true,
-        overlay: true
     },
     plugins: [
         extractCSS,
