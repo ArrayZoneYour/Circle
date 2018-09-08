@@ -1,5 +1,7 @@
 ## Circle
 
+🚀 **Release the power of Font-end**
+
 ### Quick Start
 
 ```bash
@@ -26,6 +28,10 @@ npm run start
 - [ ] Debug mode (Show the build time ... info on the right-bottom corner)
 - [ ] Todo List Level Demo
     - [ ] SubTask
+- [ ] i18n
+- [ ] Global Context
+- [ ] Cli - For quick generate template (SFC, DescriptionList, Table, ...)
+- [ ] apollo server integrate CURD, pagination
 
 ### Feature Map v0.0.1
 
