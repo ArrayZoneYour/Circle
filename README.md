@@ -30,6 +30,7 @@ npm run analyse
 ### Feature Map v0.0.2
 
 - [x] TreeShaking npm packages
+- [x] Use Webapck alias to Tree Shaking @ant-design/icons
 - [x] Separate the css and js when webpack build
 - [x] Visualize the npm dependencies
 - [ ] Debug mode (Show the build time ... info on the right-bottom corner)
