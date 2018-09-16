@@ -43,7 +43,12 @@ module.exports = {
             },
         ]
     },
-    resolve: { extensions: ['*', '.ts', '.tsx', '.mjs', '.js', '.jsx'] },
+    resolve: {
+        extensions: ['*', '.ts', '.tsx', '.mjs', '.js', '.jsx'],
+        alias: {
+            '@ant-design/icons/lib/dist$': path.resolve(__dirname, './src/icon.ts')
+        }
+    },
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "/dist/",
