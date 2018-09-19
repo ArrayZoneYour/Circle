@@ -5,7 +5,7 @@
   "main": "index.tsx",
   "scripts": {
     "start": "nodemon --exec \"webpack-dev-server --config webpack.dev.js --hot --port=8887 --mode development --output-public-path=/dist/\"",
-    "build": "webpack --config webpack.prod.js --mode production --port=7777",
+    "build": "webpack --config webpack.prod.js --mode production",
     "analyse": "nodemon --watch webpack.analyse.js --exec \"npx webpack --config webpack.analyse.js\"",
     "server": "nodemon ./server/index.js --exec babel-node"
   },
@@ -17,6 +17,7 @@
   "author": "ArrayZoneYour",
   "license": "MIT",
   "devDependencies": {
+    "@ant-design/icons": "^1.1.8",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/node": "^7.0.0",
@@ -29,6 +30,7 @@
     "@types/react-router-dom": "^4.3.0",
     "@types/webpack": "^4.4.11",
     "@types/webpack-env": "^1.13.6",
+    "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.0",
     "babel-plugin-import": "^1.8.0",
     "css-loader": "^1.0.0",
@@ -41,6 +43,7 @@
     "style-loader": "^0.23.0",
     "ts-loader": "^4.5.0",
     "typescript": "^3.0.3",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.17.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
