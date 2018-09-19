@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const extractCSS = new ExtractTextPlugin('circle.min.css');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: "./src/index.tsx",
@@ -59,5 +60,9 @@ module.exports = {
         new webpack.WatchIgnorePlugin([
             path.join(__dirname, "node_modules")
         ]),
-    ]
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+    ],
+    optimization: {
+        minimizer: [new UglifyJsPlugin()]
+    }
 };
