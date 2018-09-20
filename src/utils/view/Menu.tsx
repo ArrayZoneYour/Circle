@@ -12,7 +12,7 @@ const MenuItem = Menu.Item;
 
 // //at.alicdn.com/t/font_829049_epn1p2fhnfn.js
 const IconFont = createFromIconfontCN({
-    scriptUrl: '//at.alicdn.com/t/font_829049_epn1p2fhnfn.js',
+    scriptUrl: '//at.alicdn.com/t/font_829049_9g8yt6i8xp.js',
 });
 
 const _MenuItem = (props: MenuItemType) => {
