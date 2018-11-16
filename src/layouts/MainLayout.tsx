@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Link, RouteComponentProps, Switch, withRouter} from "react-router-dom";
+import {Link, RouteComponentProps, MemoryRouter as Router, Switch, Route, withRouter} from "react-router-dom";
 import { hot } from 'react-hot-loader';
 import {Layout} from "antd";
 import * as styles from "./MainLayout.less";
@@ -17,7 +17,7 @@ const MainLayout = (props: RouteComponentProps<{}>) => {
                 collapsible
             >
                 <div className={styles.logo} style={{ textAlign: 'center' }}>
-                    <Link to="/">
+                    <Link to="/home">
                         <h1>✈️</h1>
                     </Link>
                 </div>
@@ -30,7 +30,7 @@ const MainLayout = (props: RouteComponentProps<{}>) => {
                 <Content style={{ margin: '0 16px' }}>
                     <Navigator {...props} />
                     <div style={{ padding: 24, background: '#fff' }}>
-                        <RouterOutlet />
+                    <RouterOutlet />
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>

@@ -6,7 +6,7 @@
     "allowJs": true,
     "sourceMap": true,
     "moduleResolution": "node",
-    "module": "es2015"
+    "module": "esnext"
   },
   "exclude": [
     "node_modules"

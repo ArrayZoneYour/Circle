@@ -5,6 +5,7 @@
   "main": "index.tsx",
   "scripts": {
     "start": "nodemon --exec \"webpack-dev-server --config webpack.dev.js --hot --port=8887 --mode development --output-public-path=/dist/\"",
+    "prod": "nodemon --exec \"webpack-dev-server --config webpack.dev.js --hot --port=8889 --mode production --output-public-path=/dist/\"",
     "build": "webpack --config webpack.prod.js --mode production",
     "analyse": "nodemon --watch webpack.analyse.js --exec \"npx webpack --config webpack.analyse.js\"",
     "server": "nodemon ./server/index.js --exec babel-node"
@@ -24,9 +25,9 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
-    "@types/react": "^16.4.13",
+    "@types/react": "^16.7.6",
     "@types/react-dom": "^16.0.7",
-    "@types/react-router": "^4.0.30",
+    "@types/react-router": "^4.4.1",
     "@types/react-router-dom": "^4.3.0",
     "@types/webpack": "^4.4.11",
     "@types/webpack-env": "^1.13.6",
@@ -56,9 +57,10 @@
     "apollo-boost": "^0.1.15",
     "classnames": "^2.2.6",
     "graphql": "^14.0.0",
-    "react": "^16.4.2",
+    "moment": "^2.22.2",
+    "react": "^16.6.3",
     "react-apollo": "^2.1.11",
-    "react-dom": "^16.4.2",
+    "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1"
   }
 }
