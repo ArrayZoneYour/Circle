@@ -1,3 +1,6 @@
+# VSCode
+.vscode/
+
 node_modules/
 .idea/
 dist/

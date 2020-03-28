@@ -1,7 +1,7 @@
 {
   "name": "circle",
-  "version": "v0.0.2-dev",
-  "description": "",
+  "version": "v0.1.0-dev",
+  "description": "f-set!",
   "main": "index.tsx",
   "scripts": {
     "start": "nodemon --exec \"webpack-dev-server --config webpack.dev.js --hot --port=8887 --mode development --output-public-path=/dist/\"",

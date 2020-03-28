@@ -12,6 +12,7 @@ cd server
 npm install
 npm run start
 ```
+
 ```bash
 # shell 2
 npm install
@@ -19,6 +20,7 @@ npm run start
 ```
 
 ### Analyse you code in production
+
 ```bash
 npm run analyse
 ```
@@ -27,19 +29,25 @@ npm run analyse
 
 - [ ] Visualize the folder structure and code lines
 
+### Feature Map v0.1.0
+
+- [x] Reboot the project
+- [ ] Greenkeep dependiencies
+- [ ] Explore DllPlugin and CommonChunks plugin
+- [ ] Debug mode (Show the build time ... info on the right-bottom corner)
+- [ ] Todo List Level Demo
+  - [ ] SubTask
+- [ ] i18n
+- [ ] Global Context
+- [ ] Cli - For quick generate template (SFC, DescriptionList, Table, ...)
+- [ ] apollo server integrate CURD, pagination
+
 ### Feature Map v0.0.2
 
 - [x] TreeShaking npm packages
 - [x] Use Webapck alias to Tree Shaking @ant-design/icons
 - [x] Separate the css and js when webpack build
 - [x] Visualize the npm dependencies
-- [ ] Debug mode (Show the build time ... info on the right-bottom corner)
-- [ ] Todo List Level Demo
-    - [ ] SubTask
-- [ ] i18n
-- [ ] Global Context
-- [ ] Cli - For quick generate template (SFC, DescriptionList, Table, ...)
-- [ ] apollo server integrate CURD, pagination
 
 ### Feature Map v0.0.1
 
