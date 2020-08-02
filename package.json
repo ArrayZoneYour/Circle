@@ -4,6 +4,7 @@
   "description": "f-set!",
   "main": "index.tsx",
   "scripts": {
+    "commit": "gitmoji -c",
     "start": "nodemon --exec \"webpack-dev-server --config webpack.dev.js --hot --port=8887 --mode development --output-public-path=/dist/\"",
     "build": "webpack --config webpack.prod.js --mode production",
     "analyse": "nodemon --watch webpack.analyse.js --exec \"npx webpack --config webpack.analyse.js\"",
@@ -38,7 +39,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "nodemon": "^1.18.4",
+    "nodemon": "^2.0.4",
     "postcss-loader": "^3.0.0",
     "react-hot-loader": "^4.3.6",
     "style-loader": "^0.23.0",
