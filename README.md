@@ -1,5 +1,7 @@
 ## Circle
 
+[![Known Vulnerabilities](https://snyk.io/test/github/ArrayZoneYour/Circle/badge.svg)](https://snyk.io/test/github/ArrayZoneYour/Circle)
+
 🚀 Release the power of Font-end
 
 💪 Finding the best practice
@@ -29,10 +31,10 @@ npm run analyse
 
 - [ ] Visualize the folder structure and code lines
 
-### Feature Map v0.1.0
+### Feature Map 0.1.0
 
 - [x] Reboot the project
-- [ ] Greenkeep dependiencies
+- [x] Snyk
 - [ ] Explore DllPlugin and CommonChunks plugin
 - [ ] Debug mode (Show the build time ... info on the right-bottom corner)
 - [ ] Todo List Level Demo
@@ -42,7 +44,7 @@ npm run analyse
 - [ ] Cli - For quick generate template (SFC, DescriptionList, Table, ...)
 - [ ] apollo server integrate CURD, pagination
 
-### Feature Map v0.0.2
+### Feature Map 0.0.2
 
 - [x] TreeShaking npm packages
 - [x] Use Webapck alias to Tree Shaking @ant-design/icons
