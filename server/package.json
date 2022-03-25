@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node"
+    "start": "nodemon ./index.js --exec babel-node",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,8 @@
   },
   "dependencies": {
     "apollo-server": "^2.14.2",
-    "lodash.merge": "^4.6.1"
-  }
+    "lodash.merge": "^4.6.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
