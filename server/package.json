@@ -17,7 +17,7 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/node": "^7.0.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.0.0"
   },
   "dependencies": {
     "apollo-server": "^2.14.2",
