@@ -20,7 +20,7 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "apollo-server": "^2.14.2",
+    "apollo-server": "^3.13.0",
     "lodash.merge": "^4.6.1"
   }
 }
