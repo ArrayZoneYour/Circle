@@ -20,7 +20,7 @@
   "devDependencies": {
     "@ant-design/icons": "^1.1.8",
     "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.26.10",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
